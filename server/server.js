@@ -7,7 +7,7 @@ app = express();
 const PORT = process.env.PORT || 8000;
 
 app.use('/users', usersRouter);
-app.usr('/pharmacies', pharmaciesRouter);
+app.use('/pharmacies', pharmaciesRouter);
 
 const server = http.createServer(app);
 async function startServer() {
