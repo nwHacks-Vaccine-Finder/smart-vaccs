@@ -1,28 +1,32 @@
-.column{
-    padding-left: 30px;
-    background-color: #102B3F
-  }
-  .Pfizer{
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    padding-bottom: 40px;
-    padding-top: 40px;
-  }
-  .Moderna{
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    padding-bottom: 40px;
-    padding-top: 40px;
-  }
-  .AstraZeneca{
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    padding-bottom: 40px;
-    padding-top: 40px;
-  }
-  .PfizerPED{
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    padding-bottom: 40px;
-    padding-top: 40px;
-  }
+.column {
+  padding-left: 30px;
+  background-color: #102b3f;
+  float: left;
+  width: 325px;
+  height: 780px;
+  border-radius: 0px 30px 30px 0px;
+}
+.Pfizer {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.Moderna {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.AstraZeneca {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.PfizerPED {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
