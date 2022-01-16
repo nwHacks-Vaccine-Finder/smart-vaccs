@@ -1,14 +1,16 @@
 const express = require('express');
 const {
-  httpGetPharmcies,
+  httpGetPharmacies,
+  httpGetPharmacy,
   httpPostPharmacy,
   httpPutPharmacy,
 } = require('./pharmacies.controller');
 
 const pharmaciesRouter = express.Router();
 
-pharmaciesRouter.get('/:id', httpGetPharmcies);
+pharmaciesRouter.get('/', httpGetPharmacies);
+pharmaciesRouter.get('/:id', httpGetPharmacy);
 pharmaciesRouter.post('/', httpPostPharmacy);
-pharmaciesRouter.delete('/:id', httpPutPharmacy);
+pharmaciesRouter.put('/:id', httpPutPharmacy);
 
 module.exports = pharmaciesRouter;

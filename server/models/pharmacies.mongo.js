@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const GeoSchema = mongoose.Schema({
-  type: {
+  place: {
     type: String,
     default: 'Point',
   },
@@ -13,7 +13,7 @@ const GeoSchema = mongoose.Schema({
 
 const pharmaciesSchema = new mongoose.Schema({
   pharmacyId: {
-    type: String,
+    type: Number,
     required: true,
   },
   location: GeoSchema,

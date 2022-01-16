@@ -1,7 +1,7 @@
 const usersDatabase = require('./users.mongo');
 const pharmaciesDatabase = require('./pharmacies.mongo');
 
-async function getUsersByPharmacy(id) {
+async function getUsersByPharmacyId(id) {
   return await usersDatabase.find({ pharmacyId: id }, { _id: 0, __v: 0 });
 }
 
@@ -10,26 +10,40 @@ async function getUser(id) {
 }
 
 async function postUser(user) {
-  return await usersDatabase.findOneAndUpdate(
+  await usersDatabase.findOneAndUpdate(
     {
       userId: user.userId,
     },
     user,
     { upsert: true }
   );
+  return getUser(user.userId);
 }
 
-async function deleteUserByIdInPharmacy(userId, pharmacyId) {
-  const user = await usersDatabase.find({ pharmacyId: id }, { _id: 0, __v: 0 });
-  await pharmaciesDatabase.update(
-    { pharmacyId: pharmacyId, vaccines: { vaxType: user.vaxType } },
-    { vaccines: { quantity: { $inc: { seq: -1 } } } }
+async function deleteUserById(id) {
+  const user = await getUser(id);
+  const vaccines = await pharmaciesDatabase.findOne(
+    {
+      pharmacyId: user.pharmacyId,
+    },
+    { _id: 0, __v: 0, location: 0, pharmacyId: 0, vaccines: { _id: 0 } }
   );
+
+  await pharmaciesDatabase.updateOne(
+    { pharmacyId: id, 'vaccines.vaxType': user.vaxType },
+    {
+      $inc: {
+        'vaccines.$.quantity': -1,
+      },
+    }
+  );
+
   return await usersDatabase.remove({ userId: id });
 }
 
 module.exports = {
-  getUsersByPharmacy,
+  getUsersByPharmacyId,
   postUser,
-  deleteUserByIdInPharmacy,
+  deleteUserById,
+  getUser,
 };
