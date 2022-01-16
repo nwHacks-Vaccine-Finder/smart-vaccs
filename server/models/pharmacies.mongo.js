@@ -16,6 +16,10 @@ const pharmaciesSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  name: {
+    type: String,
+    required: true,
+  },
   location: GeoSchema,
   //   type: {
   //     type: String,

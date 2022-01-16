@@ -23,7 +23,12 @@ async function httpGetPharmacy(req, res) {
 
 async function httpPostPharmacy(req, res) {
   const pharmacy = req.body;
-  if (!pharmacy.pharmacyId || !pharmacy.vaccines || !pharmacy.location) {
+  if (
+    !pharmacy.pharmacyId ||
+    !pharmacy.name ||
+    !pharmacy.vaccines ||
+    !pharmacy.location
+  ) {
     return res.status(400).json({
       error: 'Missing required property',
     });
