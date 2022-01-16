@@ -17,6 +17,10 @@ const usersSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  vaxType: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model('Pharmacy', usersSchema);
