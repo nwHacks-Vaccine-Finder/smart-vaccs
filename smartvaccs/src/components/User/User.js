@@ -9,7 +9,7 @@ const User = () => {
   var clinicInLine = '4';
   var clinicWaitTime = '12';
   return (
-    <div style={{ padding: '40px' }}>
+    <div>
       <div className="infoCard">
         <div className="titleCard">
           <img
