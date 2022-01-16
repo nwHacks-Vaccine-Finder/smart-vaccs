@@ -32,6 +32,15 @@ const CreatePharmacy = () => {
             fullWidth
             variant="standard"
           />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Email Address"
+            type="email"
+            fullWidth
+            variant="standard"
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={onClose}>Cancel</Button>
