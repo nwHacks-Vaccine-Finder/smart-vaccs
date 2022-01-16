@@ -1,5 +1,11 @@
+const {
+  getAllPharmacies,
+  postPharmacy,
+  putPharmacy,
+} = require('../../models/pharmacies.model');
+
 async function httpGetPharmcies(req, res) {
-  const pharmacies = await getAllPharmcies();
+  const pharmacies = await getAllPharmacies();
   return res.status(200).json(pharmacies);
 }
 
@@ -10,7 +16,7 @@ async function httpPostPharmacy(req, res) {
       error: 'Missing required launch property',
     });
   }
-  const newPharmacy = await createPharmacy(user);
+  const newPharmacy = await postPharmacy(user);
   return res.status(201).json(newPharmacy);
 }
 
@@ -23,6 +29,12 @@ async function httpPutPharmacy(req, res) {
     });
   }
 
-  const updatedPharmacy = await updatePharmacy();
+  const updatedPharmacy = await putPharmacy(pharmacyId, vaccines);
   return res.status(200).json(updatedPharmacy);
 }
+
+module.exports = {
+  httpGetPharmcies,
+  httpPostPharmacy,
+  httpPutPharmacy,
+};

@@ -12,7 +12,7 @@ async function httpPostUser(req, res) {
     });
   }
   const newUser = await createUser(user);
-  return res.status(2012).json(newUser);
+  return res.status(201).json(newUser);
 }
 
 async function httpDeleteUser(req, res) {
