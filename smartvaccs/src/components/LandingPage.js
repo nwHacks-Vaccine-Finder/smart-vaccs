@@ -18,10 +18,10 @@ const LandingPage = () => {
 
       <Stack spacing={5}>
         <Button id="btn" style={{ backgroundColor: '#6247AA' }}>
-          I'm a user!
+          I'm a user
         </Button>
         <Button id="btn" style={{ backgroundColor: '#A06CD5' }}>
-          I'm a pharmacy!
+          I'm a pharmacy
         </Button>
       </Stack>
     </div>

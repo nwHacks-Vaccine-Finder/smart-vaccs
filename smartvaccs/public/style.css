@@ -1,0 +1,39 @@
+.column {
+    padding-left: 30px;
+    background-color: #102b3f;
+    float: left;
+    width: 325px;
+    height: 700px;
+    border-radius: 0px 30px 30px 0px;
+  }
+  .Pfizer {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 10px;
+    padding-top: 25px;
+  }
+  .Moderna {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .AstraZeneca {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .PfizerPED {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 25px;
+    padding-top: 10px;
+  }
+  
+  .logos {
+      max-width: 18px;
+      float: left;
+      padding-right: 10px;
+  }
+  
