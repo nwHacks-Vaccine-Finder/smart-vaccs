@@ -1,13 +1,17 @@
 .infoCard {
     background-color: #102b3f;
     float: left;
-    height: 570px;
+    height: 580px;
     width: 560px;
     color: white;
     border-radius: 20px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
+}
+
+#flag {
+    padding-top: 8px;
 }
 
 .titleCard {
@@ -23,8 +27,10 @@
 
 .titleFont {
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 30px;
+    line-height: 35px;
+    padding-top: 5px;
 }
 
 .addressFont {
@@ -32,11 +38,13 @@
     font-weight:400;
     font-size: 20px;
     text-transform: none;
+    padding-top: 10px;
 }
 
 .clinicName {
     font-family: 'Poppins', sans-serif;
     width: 200px;
+    
     font-size: 40px;
     position: relative;
     left: 10px;
@@ -52,9 +60,10 @@
 .clinicStats {
     /* background-color: tomato; */
     position: relative;
-    top: 60px;
+    top: 40px;
     display: flex;
     padding: 0px;
+    scale: 1.1;
     
 }
 
@@ -66,7 +75,6 @@
     line-height: 195px;
     background-color: #6247AA;
     border-radius: 30px;
-    text-align: center;
 }
 
 .card2 {
@@ -96,8 +104,55 @@
     text-align: center;
 }
 
-.largeStat {
+.largeStat1 {
+    position: relative;
     font-family: 'Poppins', sans-serif;
     font-size: 100px;
     font-weight: bolder;
+    padding-left: 60px;
+    top: -10px;
+}
+
+.largeStat2 {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    font-weight: bolder;
+    
+    top: -18px;
+}
+
+.largeStat3 {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 30px;
+    color: #102b3f;
+}
+
+.smallStat1 {
+    position: relative;
+    top: -135px;
+    left: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.smallStat2 {
+    position: relative;
+    top: -155px;
+    left: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.smallStat3 {
+    position: relative;
+    top: -107px;
+    left: 55px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #102b3f;
 }
