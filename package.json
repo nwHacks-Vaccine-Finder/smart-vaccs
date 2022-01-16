@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mui/material": "^5.2.8",
-    "@mui/system": "^5.2.8"
+
   }
 }
