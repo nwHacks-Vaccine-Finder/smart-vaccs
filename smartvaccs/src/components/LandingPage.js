@@ -30,9 +30,9 @@ const LandingPage = (props) => {
           }
           to="/user"
         >
-          <Button id="btn" style={{ backgroundColor: '#6247AA' }}>
+          <button className="landing-page-btn" id="user" type="submit">
             I'm a user!
-          </Button>
+          </button>
         </Link>
         <Link
           onClick={(event) =>
@@ -40,9 +40,9 @@ const LandingPage = (props) => {
           }
           to="/pharmacy"
         >
-          <Button id="btn" style={{ backgroundColor: '#A06CD5' }}>
+          <button className="landing-page-btn" id="pharmacy" type="submit">
             I'm a pharmacy!
-          </Button>
+          </button>
         </Link>
       </Stack>
     </div>

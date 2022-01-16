@@ -40,11 +40,15 @@ class GoogleOAuth extends React.Component {
     if (this.props.isSignedIn === null) {
       return null;
     } else if (this.props.isSignedIn) {
-      return <button onClick={this.onSignOutClick}>Sign Out</button>;
+      return (
+        <button onClick={this.onSignOutClick}>
+          <img src={'./Sign_Out.png'} id="oauth-btn" alt="Sign Out"></img>
+        </button>
+      );
     } else {
       return (
         <button onClick={this.onSignInClick}>
-          <img src={'./google_sign_in.png'} alt="signIn" />
+          <img src={'./Sign_In.png'} id="oauth-btn" alt="signIn" />
         </button>
       );
     }

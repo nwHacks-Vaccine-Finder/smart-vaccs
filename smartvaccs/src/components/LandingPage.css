@@ -1,45 +1,56 @@
 .container {
-    background-color: #102b3f;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    border-color: black;
-
+  background-color: #102b3f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border-color: black;
 }
 
-#btn {
-    text-size-adjust: 200px;
-    border-radius: 100px;
-    text-transform: none;
-    color: white;
-    width: 500px;
-    height: 80px;
-    font-size: 40px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-
+.landing-page-btn {
+  text-size-adjust: 200px;
+  border-radius: 100px;
+  text-transform: none;
+  color: white;
+  width: 500px;
+  height: 80px;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+#pharmacy {
+  background-color: #a06cd5;
+}
+#user {
+  background-color: #6247aa;
 }
 
 #regularFont {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 #boldFont {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 #blackFont {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
 }
 
-
-
-
-
+#oauth-btn {
+  max-height: 100px;
+  max-width: 200px;
+  background-color: #102b3f;
+  border: 0px;
+  padding: 0px;
+  margin: -10px;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}

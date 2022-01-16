@@ -1,11 +1,11 @@
 const express = require('express');
 const http = require('http');
+const cors = require('cors');
 const { mongoConnect } = require('./services/mongo');
 const usersRouter = require('./routes/users/users.router');
 const pharmaciesRouter = require('./routes/pharmacies/pharmacies.router');
-app = express();
-const PORT = process.env.PORT || 8000;
 
+const PORT = process.env.PORT || 8000;
 const app = express();
 app.use(
   cors({
