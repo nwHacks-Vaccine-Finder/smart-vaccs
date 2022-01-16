@@ -22,13 +22,6 @@ async function postUser(user) {
 
 async function deleteUserById(id) {
   const user = await getUser(id);
-  const vaccines = await pharmaciesDatabase.findOne(
-    {
-      pharmacyId: user.pharmacyId,
-    },
-    { _id: 0, __v: 0, location: 0, pharmacyId: 0, vaccines: { _id: 0 } }
-  );
-
   await pharmaciesDatabase.updateOne(
     { pharmacyId: id, 'vaccines.vaxType': user.vaxType },
     {
