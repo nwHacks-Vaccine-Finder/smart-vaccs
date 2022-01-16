@@ -21,7 +21,7 @@ const config = {
 };
 
 const Pharmacy = (props) => {
-  const ClinicName = 'Rexall';
+  const ClinicName = 'Rexall Pharmacy';
   const ClinicAddress = '499 Granville St, Vancouver, BC V6C 1T1';
   const [open, setOpen] = useState(true);
   const [pharmacy, setPharmacy] = useState({});
@@ -109,161 +109,64 @@ const Pharmacy = (props) => {
         </div>
         <div className="dosesHistory">
           <div className="dosesTitle">Doses History</div>
-          <div className="tempGraph"></div>
+          <div className="tempGraph">
+            <img id="graph" src={"./graph.png"} alt="" />
+          </div>
+          
         </div>
         <div className="recentUsersCard">
           <div className="recentUsersTitle">Recent Users</div>
           <div className="userImages">
-            <img
-              src={'./blank_profile_pic.png'}
+            <img id="pfp"
+              src={'./profile_pic.png'}
               alt=""
-              width="100px"
-              height="100px"
+              width="140px"
+              height="140px"
             />
-            <img
-              src={'./blank_profile_pic.png'}
+            <img id="pfp"
+              src={'./profile_pic.png'}
               alt=""
-              width="100px"
-              height="100px"
+              width="140px"
+              height="140px"
             />
-            <img
-              src={'./blank_profile_pic.png'}
+            <img id="pfp"
+              src={'./profile_pic.png'}
               alt=""
-              width="100px"
-              height="100px"
+              width="140px"
+              height="140px"
             />
-            <img
-              src={'./blank_profile_pic.png'}
+            <img id="pfp"
+              src={'./profile_pic.png'}
               alt=""
-              width="100px"
-              height="100px"
+              width="140px"
+              height="140px"
             />
-            <img
-              src={'./blank_profile_pic.png'}
+            <img id="pfp"
+              src={'./profile_pic.png'}
               alt=""
-              width="100px"
-              height="100px"
+              width="140px"
+              height="140px"
             />
-            <img
-              src={'./blank_profile_pic.png'}
+            <img id="pfp"
+              src={'./profile_pic.png'}
               alt=""
-              width="100px"
-              height="100px"
+              width="140px"
+              height="140px"
             />
-            <img
-              src={'./blank_profile_pic.png'}
+            <img id="pfp"
+              src={'./profile_pic.png'}
               alt=""
-              width="100px"
-              height="100px"
+              width="140px"
+              height="140px"
             />
-            <img
-              src={'./blank_profile_pic.png'}
+            <img id="pfp"
+              src={'./profile_pic.png'}
               alt=""
-              width="100px"
-              height="100px"
+              width="140px"
+              height="140px"
             />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
-            <img
-              src={'./blank_profile_pic.png'}
-              alt=""
-              width="100px"
-              height="100px"
-            />
+            
+            
           </div>
         </div>
       </div>
