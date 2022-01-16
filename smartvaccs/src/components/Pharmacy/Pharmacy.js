@@ -21,6 +21,8 @@ const config = {
 };
 
 const Pharmacy = (props) => {
+  const ClinicName = 'Rexall';
+  const ClinicAddress = '499 Granville St, Vancouver, BC V6C 1T1';
   const [open, setOpen] = useState(true);
   const [pharmacy, setPharmacy] = useState({});
   async function getPharmacyById(id) {
@@ -32,7 +34,6 @@ const Pharmacy = (props) => {
     response.headers.status === 404 ? setOpen(true) : setPharmacy(response);
   }
   useEffect(() => {
-    console.log(props.auth.isSignedIn);
     if (props.auth.isSignedIn !== true) {
       return <Navigate to="/" />;
     }
@@ -41,7 +42,7 @@ const Pharmacy = (props) => {
 
   return (
     <div class="page">
-      <Dialog open={open} onClose={() => setOpen(false)}>
+      {/* <Dialog open={open} onClose={() => setOpen(false)}>
         <DialogTitle>Add your Pharmacy's Information</DialogTitle>
         <DialogContent>
           <DialogContentText>To</DialogContentText>
@@ -58,7 +59,7 @@ const Pharmacy = (props) => {
         <DialogActions>
           <Button onClick={() => setOpen(false)}>Cancel</Button>
         </DialogActions>
-      </Dialog>
+      </Dialog> */}
       <div class="leftSide">
         <div class="row">
           <div class="column">
@@ -103,8 +104,8 @@ const Pharmacy = (props) => {
 
       <div className="rightSide">
         <div className="clinicInfo">
-          <div className="clinicName">{pharmacy.name}</div>
-          <div className="clinicAddress">{pharmacy.location.place}</div>
+          <div className="clinicName">{ClinicName}</div>
+          <div className="clinicAddress">{ClinicAddress}</div>
         </div>
         <div className="dosesHistory">
           <div className="dosesTitle">Doses History</div>
