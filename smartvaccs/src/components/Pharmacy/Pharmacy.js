@@ -1,11 +1,64 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { connect } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 import './PharmacyStyles.css';
+import axios from 'axios';
 
-const Pharmacy = () => {
-  var clinicName = 'Rexall Pharmacy';
-  var clinicAddress = '696 Belmont Ave W';
+const config = {
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE',
+    'Access-Control-Allow-Headers':
+      'Access-Control-Allow-Headers, Origin,Accept, Content-Type, ',
+  },
+};
+
+const Pharmacy = (props) => {
+  const [open, setOpen] = useState(true);
+  const [pharmacy, setPharmacy] = useState({});
+  async function getPharmacyById(id) {
+    const response = await axios.get(
+      `http://localhost:8000/pharmacies/${id}`,
+      config
+    );
+    console.log(response.headers.status);
+    response.headers.status === 404 ? setOpen(true) : setPharmacy(response);
+  }
+  useEffect(() => {
+    console.log(props.auth.isSignedIn);
+    if (props.auth.isSignedIn !== true) {
+      return <Navigate to="/" />;
+    }
+    getPharmacyById(props.auth.userId);
+  }, []);
+
   return (
     <div class="page">
+      <Dialog open={open} onClose={() => setOpen(false)}>
+        <DialogTitle>Add your Pharmacy's Information</DialogTitle>
+        <DialogContent>
+          <DialogContentText>To</DialogContentText>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Email Address"
+            type="email"
+            fullWidth
+            variant="standard"
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setOpen(false)}>Cancel</Button>
+        </DialogActions>
+      </Dialog>
       <div class="leftSide">
         <div class="row">
           <div class="column">
@@ -13,7 +66,6 @@ const Pharmacy = () => {
               <h2 class="pfizertitle">Pfizer</h2>
               <img class="logos" src="./Doses.png"></img>
               <p>
-                {' '}
                 Doses Left: 6 <br></br>
                 <img class="logos" src="./Refill.png"></img>Refill Date: Jan
                 19th
@@ -51,8 +103,8 @@ const Pharmacy = () => {
 
       <div className="rightSide">
         <div className="clinicInfo">
-          <div className="clinicName">{clinicName}</div>
-          <div className="clinicAddress">{clinicAddress}</div>
+          <div className="clinicName">{pharmacy.name}</div>
+          <div className="clinicAddress">{pharmacy.location.place}</div>
         </div>
         <div className="dosesHistory">
           <div className="dosesTitle">Doses History</div>
@@ -218,4 +270,8 @@ const Pharmacy = () => {
   );
 };
 
-export default Pharmacy;
+const mapStateToProps = (state) => {
+  return { auth: state.auth };
+};
+
+export default connect(mapStateToProps)(Pharmacy);
