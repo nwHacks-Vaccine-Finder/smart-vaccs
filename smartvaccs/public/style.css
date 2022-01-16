@@ -37,3 +37,10 @@
       padding-right: 10px;
   }
   
+  #rectext{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 200%;
+    align-items: center;
+  }
