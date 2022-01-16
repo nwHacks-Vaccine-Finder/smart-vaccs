@@ -1,0 +1,103 @@
+.infoCard {
+    background-color: #102b3f;
+    float: left;
+    height: 570px;
+    width: 560px;
+    color: white;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.titleCard {
+    /* background-color: tomato; */
+    position: relative;
+    min-width: 500px;
+    height: 150px;
+    left: 20px;
+    top: 20px;
+    align-content:flex-start;
+    display: flex;
+}
+
+.titleFont {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.addressFont {
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+    font-size: 20px;
+    text-transform: none;
+}
+
+.clinicName {
+    font-family: 'Poppins', sans-serif;
+    width: 200px;
+    font-size: 40px;
+    position: relative;
+    left: 10px;
+    text-transform: uppercase;
+}
+
+.clinicAddress {
+    font-family: 'Poppins', sans-serif;
+    width: 200px;
+    font-size: 40px;
+}
+
+.clinicStats {
+    /* background-color: tomato; */
+    position: relative;
+    top: 60px;
+    display: flex;
+    padding: 0px;
+    
+}
+
+.card1 {
+    position: relative;
+    left: 40px;
+    min-width: 180px;
+    height: 195px;
+    line-height: 195px;
+    background-color: #6247AA;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.card2 {
+    position: relative;
+    left: 60px;
+    min-width: 290px;
+    width: 260px;
+    height: 210px;
+    line-height: 210px;
+    background-color: #A06CD5;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.card3 {
+    position: relative;
+    min-width: 350px;
+    height: 110px;
+    line-height: 110px;
+    background-color: #E2CFEA;
+    left: -360px;
+    top: 230px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.largeStat {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    font-weight: bolder;
+}
