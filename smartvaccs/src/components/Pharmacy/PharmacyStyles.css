@@ -73,6 +73,7 @@
 .clinicName {
   font-size: 60px;
   font-weight: bolder;
+  width: fit-content;
 }
 
 .clinicAddress {
@@ -118,12 +119,18 @@
   display: inline-block;
 }
 
-.div.userImages img {
-  opacity: 0.2;
-  filter: alpha(opacity=20);
-  position: absolute;
+#pfp {
+  position: relative;
+  top: 30px;
+  padding-left: 35px;
+
 }
 
 .leftSide {
   scale: 100px;
+}
+
+#graph {
+  position: relative;
+  left: 200px;
 }
