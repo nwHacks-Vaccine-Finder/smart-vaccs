@@ -27,7 +27,16 @@ const CreatePharmacy = () => {
             autoFocus
             margin="dense"
             id="name"
-            label="Email Address"
+            label="Name"
+            type="email"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="address"
+            label="Address"
             type="email"
             fullWidth
             variant="standard"

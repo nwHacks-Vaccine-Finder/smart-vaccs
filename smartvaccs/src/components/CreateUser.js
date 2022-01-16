@@ -40,15 +40,6 @@ const CreateUser = () => {
             fullWidth
             variant="standard"
           />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Age"
-            type="email"
-            fullWidth
-            variant="standard"
-          />
         </DialogContent>
         <DialogActions>
           <Button onClick={onClose}>Cancel</Button>
