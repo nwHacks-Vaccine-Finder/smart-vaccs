@@ -23,15 +23,14 @@ async function postUser(user) {
 async function deleteUserById(id) {
   const user = await getUser(id);
   await pharmaciesDatabase.updateOne(
-    { pharmacyId: id, 'vaccines.vaxType': user.vaxType },
+    { pharmacyId: user.pharmacyId, 'vaccines.vaxType': user.vaxType },
     {
       $inc: {
         'vaccines.$.quantity': -1,
       },
     }
   );
-
-  return await usersDatabase.remove({ userId: id });
+  return await usersDatabase.deleteOne({ userId: id });
 }
 
 module.exports = {
