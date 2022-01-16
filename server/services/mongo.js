@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const MONGO_URL =
-  'mongodb+srv://vax-api:PeibkjavcyR1QJ1a@smartvaccine-cluster.hi6ok.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+require('dotenv');
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connection.on('error', (err) => {
   console.log(err);
