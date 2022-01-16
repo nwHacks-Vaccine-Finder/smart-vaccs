@@ -1,0 +1,28 @@
+.column{
+    padding-left: 30px;
+    background-color: #102B3F
+  }
+  .Pfizer{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  .Moderna{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  .AstraZeneca{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  .PfizerPED{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }

@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install":"npm install --prefix server && npm install --prefix smartvaccs",
-    "client":"npm start --prefix smartvaccs",
-    "server":"npm run watch --prefix server",
-    "start":"npm run client & npm run sever"
+    "install": "npm install --prefix server && npm install --prefix smartvaccs",
+    "client": "npm start --prefix smartvaccs",
+    "server": "npm run watch --prefix server",
+    "start": "npm run client & npm run sever"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@mui/material": "^5.2.8"
+  }
 }

@@ -10,9 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< Updated upstream
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "mongoose": "^6.1.6"
+=======
+    "express": "^4.17.2",
+    "nwhacks-smartvaccs": "file:.."
+>>>>>>> Stashed changes
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
