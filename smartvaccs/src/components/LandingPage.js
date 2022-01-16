@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Stack, Button } from '@mui/material';
+import { connect } from 'react-redux';
 import './LandingPage.css';
 import { fontSize } from '@mui/system';
+import { Link } from 'react-router-dom';
+import GoogleOAuth from './GoogleOAuth';
 
-const LandingPage = () => {
+const LandingPage = (props) => {
+  useEffect(() => {
+    console.log(props.auth);
+  }, [props.auth.isSignedIn]);
   return (
     <div className="container">
+      <GoogleOAuth />
       <Stack
         spacing={5}
         direction="row"
@@ -17,15 +24,33 @@ const LandingPage = () => {
       </Stack>
 
       <Stack spacing={5}>
-        <Button id="btn" style={{ backgroundColor: '#6247AA' }}>
-          I'm a user
-        </Button>
-        <Button id="btn" style={{ backgroundColor: '#A06CD5' }}>
-          I'm a pharmacy
-        </Button>
+        <Link
+          onClick={(event) =>
+            props.auth.isSignedIn === true ? null : event.preventDefault
+          }
+          to="/user"
+        >
+          <Button id="btn" style={{ backgroundColor: '#6247AA' }}>
+            I'm a user!
+          </Button>
+        </Link>
+        <Link
+          onClick={(event) =>
+            props.auth.isSignedIn === true ? null : event.preventDefault
+          }
+          to="/pharmacy"
+        >
+          <Button id="btn" style={{ backgroundColor: '#A06CD5' }}>
+            I'm a pharmacy!
+          </Button>
+        </Link>
       </Stack>
     </div>
   );
 };
 
-export default LandingPage;
+const mapStateToProps = (state) => {
+  return { auth: state.auth };
+};
+
+export default connect(mapStateToProps)(LandingPage);
