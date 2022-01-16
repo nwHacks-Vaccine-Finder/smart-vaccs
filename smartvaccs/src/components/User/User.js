@@ -11,11 +11,11 @@ const User = () => {
     <div style={{padding: "40px"}}>
       <div className="infoCard">
         <div className="titleCard">
-          <img src={"/pharmacyflag.png"} alt="" width="150px" height="150px"/>
+          <img id="flag" src={"/pharmacyflag.png"} alt="" width="110px" height="110px"/>
           <div className="clinicName">
             
             <div className="titleFont">
-              {clinicName}
+              {clinicName} 
             </div>
             <div className="addressFont">
               {clinicAddress}
@@ -25,18 +25,28 @@ const User = () => {
         </div>
         <div className="clinicStats">
           <div className="card1">
-            <div className="largeStat">
+            <div className="largeStat1">
               {clinicDoses}
             </div>
+            <div className="smallStat1">
+              Doses left
+            </div>
+
           </div>
           <div className="card2">
-            <div className="largeStat">
+            <div className="largeStat2">
               {clinicInLine}
+            </div>
+            <div className="smallStat2">
+              People in line
             </div>
           </div>
           <div className="card3">
-            <div className="largeStat" >
+            <div className="largeStat3" >
               {clinicWaitTime}
+            </div>
+            <div className="smallStat3">
+              Minute wait time*
             </div>
           </div>
         </div>
