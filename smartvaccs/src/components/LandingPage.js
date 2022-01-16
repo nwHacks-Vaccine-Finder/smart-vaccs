@@ -24,6 +24,7 @@ const LandingPage = (props) => {
       </Stack>
 
       <Stack spacing={5}>
+<<<<<<< HEAD
         <Link
           onClick={(event) =>
             props.auth.isSignedIn === true ? null : event.preventDefault
@@ -44,6 +45,14 @@ const LandingPage = (props) => {
             I'm a pharmacy!
           </Button>
         </Link>
+=======
+        <Button id="btn" style={{ backgroundColor: '#6247AA' }}>
+          I'm a user
+        </Button>
+        <Button id="btn" style={{ backgroundColor: '#A06CD5' }}>
+          I'm a pharmacy
+        </Button>
+>>>>>>> d3b3d3f5c3dd09afe3660a460615137c0216cf7a
       </Stack>
     </div>
   );
